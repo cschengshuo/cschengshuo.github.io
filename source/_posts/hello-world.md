@@ -1,38 +1,38 @@
 ---
 title: Hello World
+categories: [日记]
+tag: [Hello]
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+在部署Ghost博客之后，还是把Hexo博客部署起来了。相比于动态博客，静态博客所有内容都进行了版本管理还是更安心一些。
 
-## Quick Start
+很久没有写点东西了，写起来没头没脑地。反正只有我一个人看，也就不在乎什么了。
 
-### Create a new post
+## 快速开始
+
+熟悉一下Hexo的写作方式
+
+### 创建新文章
 
 ``` bash
 $ hexo new "My New Post"
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+更多信息: [写作](https://hexo.io/docs/writing.html)
 
-### Run server
+## 本博客的主要内容
 
-``` bash
-$ hexo server
-```
+### 学习笔记
 
-More info: [Server](https://hexo.io/docs/server.html)
+在计算机科学的学习过程中，相关的笔记就不使用纸笔，而是使用本博客来记录。这些笔记用作自己的复习与总结，所以只是个人的备忘，而不是向大家分享的内容。当然随着写作的熟练度上升，也可以考虑写一些技术博客。
 
-### Generate static files
+### 学习规划
 
-``` bash
-$ hexo generate
-```
+在学习过程中，每完成一个阶段性的目标，就稍作总结并规划接下来的学习。
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+每天早上进行回顾之时，要对当天的学习内容进行简单规划，在晚上总结之时，检验进度。
 
-### Deploy to remote sites
+### 学习总结
 
-``` bash
-$ hexo deploy
-```
+晚上学习结束之后总结今天学习的内容，列举学习的章节和重要知识点。
 
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+早上回顾昨天的学习内容，尽管会和第一天的总结有很多重复，但主要目的是加深记忆

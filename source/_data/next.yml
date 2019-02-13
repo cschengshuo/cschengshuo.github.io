@@ -1,0 +1,43 @@
+footer:
+  since: 2019
+  powered:
+    enable: false
+    version: false
+
+  theme:
+    enable: false
+    version: false
+
+menu:
+  home: / || home
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
+
+scheme: Pisces
+
+social:
+  GitHub: https://github.com/cschengshuo || github
+  E-Mail: mailto:cschengshuo@live.com || envelope
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+
+social_icons:
+  enable: true
+  icons_only: true
+  transition: false
+
+motion:
+  enable: false
+
+font:
+  enable: true
+
+  global:
+    family: Noto Sans SC
+
+  headings:
+    family: Monda
+
+custom_file_path:
+  styles: source/_data/styles.styl

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next pisces" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Sans SC:300,300italic,400,400italic,700,700italic|Monda:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="理论计算机科学 Theoretical Computer Science数据结构与算法 Data Structures And Algorithms Data Structures And Algorithm Analysis in C++ CLRS  计算理论 Theory of Computation不懂 信息论与编码理论 Information and Coding Theory不懂 程序设">
+<meta name="keywords" content="CS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="computer science fields summary">
+<meta property="og:url" content="http://blog.monad.page/2019/02/15/computer-science-fields-summary/index.html">
+<meta property="og:site_name" content="读书如抽丝">
+<meta property="og:description" content="理论计算机科学 Theoretical Computer Science数据结构与算法 Data Structures And Algorithms Data Structures And Algorithm Analysis in C++ CLRS  计算理论 Theory of Computation不懂 信息论与编码理论 Information and Coding Theory不懂 程序设">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-15T13:29:58.632Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="computer science fields summary">
+<meta name="twitter:description" content="理论计算机科学 Theoretical Computer Science数据结构与算法 Data Structures And Algorithms Data Structures And Algorithm Analysis in C++ CLRS  计算理论 Theory of Computation不懂 信息论与编码理论 Information and Coding Theory不懂 程序设">
+
+
+
+
+
+
+  <link rel="canonical" href="http://blog.monad.page/2019/02/15/computer-science-fields-summary/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>computer science fields summary | 读书如抽丝</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">读书如抽丝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.monad.page/2019/02/15/computer-science-fields-summary/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="程硕">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="读书如抽丝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">computer science fields summary
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-15 20:38:29 / 修改时间：21:29:58" itemprop="dateCreated datePublished" datetime="2019-02-15T20:38:29+08:00">2019-02-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/计算机科学/" itemprop="url" rel="index"><span itemprop="name">计算机科学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="理论计算机科学-Theoretical-Computer-Science"><a href="#理论计算机科学-Theoretical-Computer-Science" class="headerlink" title="理论计算机科学 Theoretical Computer Science"></a>理论计算机科学 Theoretical Computer Science</h3><h4 id="数据结构与算法-Data-Structures-And-Algorithms"><a href="#数据结构与算法-Data-Structures-And-Algorithms" class="headerlink" title="数据结构与算法 Data Structures And Algorithms"></a>数据结构与算法 Data Structures And Algorithms</h4><ol>
+<li>Data Structures And Algorithm Analysis in C++</li>
+<li>CLRS</li>
+</ol>
+<h4 id="计算理论-Theory-of-Computation"><a href="#计算理论-Theory-of-Computation" class="headerlink" title="计算理论 Theory of Computation"></a>计算理论 Theory of Computation</h4><p>不懂</p>
+<h4 id="信息论与编码理论-Information-and-Coding-Theory"><a href="#信息论与编码理论-Information-and-Coding-Theory" class="headerlink" title="信息论与编码理论 Information and Coding Theory"></a>信息论与编码理论 Information and Coding Theory</h4><p>不懂</p>
+<h4 id="程序设计语言理论-Programing-Language-Theory"><a href="#程序设计语言理论-Programing-Language-Theory" class="headerlink" title="程序设计语言理论 Programing Language Theory"></a>程序设计语言理论 Programing Language Theory</h4><ol>
+<li>SICP</li>
+</ol>
+<h5 id="编程语言-Programming-Language"><a href="#编程语言-Programming-Language" class="headerlink" title="编程语言 Programming Language"></a>编程语言 Programming Language</h5><ol>
+<li>C++</li>
+<li>Go</li>
+<li>TypeScript</li>
+<li>Rust</li>
+<li>Haskell</li>
+</ol>
+<h4 id="编程范式-Programming-Paradigms"><a href="#编程范式-Programming-Paradigms" class="headerlink" title="编程范式 Programming Paradigms"></a>编程范式 Programming Paradigms</h4><ul>
+<li>面向对象</li>
+<li>函数式编程</li>
+</ul>
+<h4 id="形式化方法-Formal-Methods"><a href="#形式化方法-Formal-Methods" class="headerlink" title="形式化方法 Formal Methods"></a>形式化方法 Formal Methods</h4><p>不懂</p>
+<h3 id="计算机系统-Computer-Systems"><a href="#计算机系统-Computer-Systems" class="headerlink" title="计算机系统 Computer Systems"></a>计算机系统 Computer Systems</h3><h4 id="计算机体系结构与计算机工程-Computer-Architecture-and-Computer-Engineering"><a href="#计算机体系结构与计算机工程-Computer-Architecture-and-Computer-Engineering" class="headerlink" title="计算机体系结构与计算机工程 Computer Architecture and Computer Engineering"></a>计算机体系结构与计算机工程 Computer Architecture and Computer Engineering</h4><ol>
+<li>CSAPP</li>
+</ol>
+<h4 id="操作系统-Operation-System"><a href="#操作系统-Operation-System" class="headerlink" title="操作系统 Operation System"></a>操作系统 Operation System</h4><ol>
+<li>Modern Operation System</li>
+</ol>
+<h4 id="并发、并行与分布式系统-Concurrent-Parallel-and-Distributed-Systems"><a href="#并发、并行与分布式系统-Concurrent-Parallel-and-Distributed-Systems" class="headerlink" title="并发、并行与分布式系统 Concurrent, Parallel and Distributed Systems"></a>并发、并行与分布式系统 Concurrent, Parallel and Distributed Systems</h4><h4 id="计算机网络-Computer-Networks"><a href="#计算机网络-Computer-Networks" class="headerlink" title="计算机网络 Computer Networks"></a>计算机网络 Computer Networks</h4><ol>
+<li>Computer Networks</li>
+</ol>
+<h4 id="计算机安全与密码学-Computer-Security-and-Cryptography"><a href="#计算机安全与密码学-Computer-Security-and-Cryptography" class="headerlink" title="计算机安全与密码学 Computer Security and Cryptography"></a>计算机安全与密码学 Computer Security and Cryptography</h4><p>不懂</p>
+<h4 id="数据库-Databases"><a href="#数据库-Databases" class="headerlink" title="数据库 Databases"></a>数据库 Databases</h4><p>不懂</p>
+<h3 id="计算机应用技术-Computer-Applications"><a href="#计算机应用技术-Computer-Applications" class="headerlink" title="计算机应用技术 Computer Applications"></a>计算机应用技术 Computer Applications</h3><h4 id="计算机图形学-Computer-Graphics-and-Visualization"><a href="#计算机图形学-Computer-Graphics-and-Visualization" class="headerlink" title="计算机图形学 Computer Graphics and Visualization"></a>计算机图形学 Computer Graphics and Visualization</h4><ol>
+<li>Computer Graphics</li>
+</ol>
+<h4 id="科学计算-Scientific-Computing"><a href="#科学计算-Scientific-Computing" class="headerlink" title="科学计算 Scientific Computing"></a>科学计算 Scientific Computing</h4><p>不懂</p>
+<h4 id="人机交互-Human-Computer-Interaction"><a href="#人机交互-Human-Computer-Interaction" class="headerlink" title="人机交互 Human-Computer Interaction"></a>人机交互 Human-Computer Interaction</h4><p>不懂</p>
+<h4 id="人工智能-Aritifical-Intelligence"><a href="#人工智能-Aritifical-Intelligence" class="headerlink" title="人工智能 Aritifical Intelligence"></a>人工智能 Aritifical Intelligence</h4><ul>
+<li>自然语言处理 NLP</li>
+</ul>
+<h4 id="机器学习-Machine-Learning"><a href="#机器学习-Machine-Learning" class="headerlink" title="机器学习 Machine Learning"></a>机器学习 Machine Learning</h4><h3 id="软件工程-Software-Engineering"><a href="#软件工程-Software-Engineering" class="headerlink" title="软件工程 Software Engineering"></a>软件工程 Software Engineering</h3><ol>
+<li>Pro Git</li>
+<li>Git for Teams</li>
+<li>DDIA</li>
+</ol>
+<h3 id="其他-Others"><a href="#其他-Others" class="headerlink" title="其他 Others"></a>其他 Others</h3><h4 id="计算数学-Mathematics-of-computing"><a href="#计算数学-Mathematics-of-computing" class="headerlink" title="计算数学 Mathematics of computing"></a>计算数学 Mathematics of computing</h4><ul>
+<li>离散数学</li>
+<li>数理逻辑</li>
+<li>类型论</li>
+<li>范畴论</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CS/" rel="tag"># CS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/15/markdown-notes/" rel="next" title="markdown 使用总结">
+                <i class="fa fa-chevron-left"></i> markdown 使用总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">程硕</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cschengshuo" title="GitHub &rarr; https://github.com/cschengshuo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:cschengshuo@live.com" title="E-Mail &rarr; mailto:cschengshuo@live.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#理论计算机科学-Theoretical-Computer-Science"><span class="nav-number">1.</span> <span class="nav-text">理论计算机科学 Theoretical Computer Science</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据结构与算法-Data-Structures-And-Algorithms"><span class="nav-number">1.1.</span> <span class="nav-text">数据结构与算法 Data Structures And Algorithms</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算理论-Theory-of-Computation"><span class="nav-number">1.2.</span> <span class="nav-text">计算理论 Theory of Computation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#信息论与编码理论-Information-and-Coding-Theory"><span class="nav-number">1.3.</span> <span class="nav-text">信息论与编码理论 Information and Coding Theory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序设计语言理论-Programing-Language-Theory"><span class="nav-number">1.4.</span> <span class="nav-text">程序设计语言理论 Programing Language Theory</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#编程语言-Programming-Language"><span class="nav-number">1.4.1.</span> <span class="nav-text">编程语言 Programming Language</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编程范式-Programming-Paradigms"><span class="nav-number">1.5.</span> <span class="nav-text">编程范式 Programming Paradigms</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#形式化方法-Formal-Methods"><span class="nav-number">1.6.</span> <span class="nav-text">形式化方法 Formal Methods</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机系统-Computer-Systems"><span class="nav-number">2.</span> <span class="nav-text">计算机系统 Computer Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#计算机体系结构与计算机工程-Computer-Architecture-and-Computer-Engineering"><span class="nav-number">2.1.</span> <span class="nav-text">计算机体系结构与计算机工程 Computer Architecture and Computer Engineering</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#操作系统-Operation-System"><span class="nav-number">2.2.</span> <span class="nav-text">操作系统 Operation System</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#并发、并行与分布式系统-Concurrent-Parallel-and-Distributed-Systems"><span class="nav-number">2.3.</span> <span class="nav-text">并发、并行与分布式系统 Concurrent, Parallel and Distributed Systems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算机网络-Computer-Networks"><span class="nav-number">2.4.</span> <span class="nav-text">计算机网络 Computer Networks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算机安全与密码学-Computer-Security-and-Cryptography"><span class="nav-number">2.5.</span> <span class="nav-text">计算机安全与密码学 Computer Security and Cryptography</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库-Databases"><span class="nav-number">2.6.</span> <span class="nav-text">数据库 Databases</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机应用技术-Computer-Applications"><span class="nav-number">3.</span> <span class="nav-text">计算机应用技术 Computer Applications</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#计算机图形学-Computer-Graphics-and-Visualization"><span class="nav-number">3.1.</span> <span class="nav-text">计算机图形学 Computer Graphics and Visualization</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#科学计算-Scientific-Computing"><span class="nav-number">3.2.</span> <span class="nav-text">科学计算 Scientific Computing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#人机交互-Human-Computer-Interaction"><span class="nav-number">3.3.</span> <span class="nav-text">人机交互 Human-Computer Interaction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#人工智能-Aritifical-Intelligence"><span class="nav-number">3.4.</span> <span class="nav-text">人工智能 Aritifical Intelligence</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#机器学习-Machine-Learning"><span class="nav-number">3.5.</span> <span class="nav-text">机器学习 Machine Learning</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件工程-Software-Engineering"><span class="nav-number">4.</span> <span class="nav-text">软件工程 Software Engineering</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他-Others"><span class="nav-number">5.</span> <span class="nav-text">其他 Others</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#计算数学-Mathematics-of-computing"><span class="nav-number">5.1.</span> <span class="nav-text">计算数学 Mathematics of computing</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">程硕</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

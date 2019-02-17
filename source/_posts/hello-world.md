@@ -8,17 +8,7 @@ tag: [Hello]
 
 很久没有写点东西了，写起来没头没脑地。反正只有我一个人看，也就不在乎什么了。
 
-## 快速开始
-
-熟悉一下Hexo的写作方式
-
-### 创建新文章
-
-``` bash
-$ hexo new "My New Post"
-```
-
-更多信息: [写作](https://hexo.io/docs/writing.html)
+<!-- more -->
 
 ## 本博客的主要内容
 

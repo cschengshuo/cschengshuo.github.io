@@ -4,7 +4,7 @@ footer:
   since: 2019
   powered: false
 
-# scheme: Gemini
+scheme: Pisces
 
 menu:
   home: / || fa fa-home
@@ -23,12 +23,9 @@ social_icons:
 font:
   enable: true
   global:
-    family: Noto Sans SC
+    family: Sarasa Mono SC
   headings:
     family: Monda
 
 motion:
   enable: false
-
-custom_file_path:
-  styles: source/_data/styles.styl

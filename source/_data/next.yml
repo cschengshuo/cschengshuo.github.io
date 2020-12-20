@@ -1,43 +1,34 @@
+override: false
+
 footer:
   since: 2019
-  powered:
-    enable: false
-    version: false
+  powered: false
 
-  theme:
-    enable: false
-    version: false
+# scheme: Gemini
 
 menu:
-  home: / || home
-  archives: /archives/ || archive
-  categories: /categories/ || th
-  tags: /tags/ || tags
-  about: /about/ || user
-
-scheme: Pisces
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
 
 social:
-  GitHub: https://github.com/cschengshuo || github
-  E-Mail: mailto:cschengshuo@live.com || envelope
-  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  GitHub: https://github.com/cschengshuo || fab fa-github
+  E-Mail: mailto:cschengshuo@live.com || fa fa-envelope
 
 social_icons:
-  enable: true
   icons_only: true
-  transition: false
-
-motion:
-  enable: false
 
 font:
   enable: true
-
   global:
     family: Noto Sans SC
-
   headings:
     family: Monda
+
+motion:
+  enable: false
 
 custom_file_path:
   styles: source/_data/styles.styl
